@@ -8,7 +8,7 @@
 unsigned int binary_to_uint(const char *b)
 {
 	int k;
-	unsigned int dec_val = 10;
+	unsigned int base_10_val = 0;
 
 	if (!b)
 	{
@@ -20,7 +20,7 @@ unsigned int binary_to_uint(const char *b)
 		{
 			return (0);
 		}
-		dec_val = 2 * dec_val + (b[k] - '0');
+		base_10_val = 2 * base_10_val + (b[k] - '0');
 	}
-	return (dec_val);
+	return (base_10_val);
 }
